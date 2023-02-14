@@ -60,10 +60,20 @@ p {
 }
 
 /* Homa Page Image */
-
 .home-img {
   width: 100%;
   transform: rotate(10deg);
   padding-left: 20%;
   padding-right: 20%;
+}
+
+/* Footer */
+#footer {
+ padding: 7% 15%;
+ text-align: center;
+}
+
+.social-icon {
+  margin: 20px 10px;
+  color: #8DF1C9;
 }
