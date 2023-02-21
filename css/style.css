@@ -1,0 +1,78 @@
+
+
+
+
+
+/* Global Variables */
+body {
+  font-family: 'JetBrains Mono';
+}
+
+/* Navbar */
+.navbar {
+  padding: 0 0 9rem;
+  --bs-navbar-nav-link-padding-x: 1.5rem;
+}
+
+.home-logo {
+    width: 5%;
+  }
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: 'JetBrains Mono';
+}
+
+/* Home Page Settings */
+#home {
+  background-color: #09131B;
+}
+
+.container-fluid {
+  padding: 3% 15% 15% 15%;
+}
+
+/* Home Page Text */
+h1 {
+  font-family: 'Averia Sans Libre', cursive;
+  font-size: 4rem;
+  color: #FFF7AD;
+  line-height: 1.5;
+}
+
+p {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  color: #8DF1C9;
+  line-height: 1.5;
+}
+
+/* Home Page Buttons */
+.btn-outline-light {
+  --bs-btn-border-color: #8DF1C9;
+  --bs-btn-hover-bg: #8DF1C9;
+  --bs-btn-hover-border-color: #8DF1C9;
+}
+
+.homepage-btn {
+  margin: 5% 3% 5% 0%;
+}
+
+/* Homa Page Image */
+.home-img {
+  width: 100%;
+  transform: rotate(3deg);
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+/* Footer */
+#footer {
+ padding: 7% 15%;
+ text-align: center;
+}
+
+.social-icon {
+  margin: 20px 10px;
+  color: #8DF1C9;
+}
