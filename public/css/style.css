@@ -1,8 +1,4 @@
 
-
-
-
-
 /* Global Variables */
 body {
   font-family: 'JetBrains Mono';
@@ -58,10 +54,10 @@ p {
   margin: 5% 3% 5% 0%;
 }
 
-/* Homa Page Image */
+/* Home Page Image */
 .home-img {
-  width: 100%;
-  transform: rotate(3deg);
+  width: 110%;
+  transform: rotate(5deg);
   padding-left: 20%;
   padding-right: 20%;
 }
