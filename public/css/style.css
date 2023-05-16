@@ -4,31 +4,40 @@ body {
   font-family: 'JetBrains Mono';
 }
 
+/* ========== Header Settings ========== */
+#header {
+  background-color: #09131B;
+}
+
 /* Navbar */
 .navbar {
-  padding: 0 0 9rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 3rem 5rem;
   --bs-navbar-nav-link-padding-x: 1.5rem;
 }
 
-.home-logo {
-    width: 5%;
-  }
+.logo {
+  width:3rem;
+}
 
 .nav-link {
   font-size: 1.2rem;
   font-family: 'JetBrains Mono';
 }
 
-/* Home Page Settings */
-#home {
+
+/* ========== Body Settings ========== */
+#body {
   background-color: #09131B;
 }
 
 .container-fluid {
-  padding: 3% 15% 15% 15%;
+  padding: 20% 15% 5% 15%;
 }
 
-/* Home Page Text */
+/* Text */
 h1 {
   font-family: 'Averia Sans Libre', cursive;
   font-size: 4rem;
@@ -43,7 +52,7 @@ p {
   line-height: 1.5;
 }
 
-/* Home Page Buttons */
+/* Buttons */
 .btn-outline-light {
   --bs-btn-border-color: #8DF1C9;
   --bs-btn-hover-bg: #8DF1C9;
@@ -58,17 +67,19 @@ p {
 .home-img {
   width: 110%;
   transform: rotate(5deg);
-  padding-left: 20%;
-  padding-right: 20%;
+  padding: 10% 10% 0% 20%;
 }
 
-/* Footer */
+
+/* ========== footer Settings ========== */
 #footer {
- padding: 7% 15%;
- text-align: center;
+  background-color: #09131B;
+  padding: 5% 5%;
+  text-align: center;
 }
 
 .social-icon {
-  margin: 20px 10px;
+  font-size: large ;
+  margin: 3% 3%;
   color: #8DF1C9;
 }

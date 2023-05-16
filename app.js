@@ -27,6 +27,19 @@ app.get("/", (req, res) => {
     res.render(__dirname + '/views/index');
 });
 
+app.get("/about", (req, res) => {
+    res.render(__dirname + '/views/about');
+});
+
+app.get("/projects", (req, res) => {
+    res.render(__dirname + '/views/projects');
+});
+
+app.get("/contact", (req, res) => {
+    res.render(__dirname + '/views/contact');
+});
+
+
 // Heroku port
 let port = process.env.PORT;
 if (port == null || port == "") {
