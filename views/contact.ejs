@@ -1,24 +1,76 @@
 <%- include("partials/header.ejs"); -%>                
     <body>
         <section id="body">
-            <div class="container-fluid">  
-                <!-- Home Page -->
-                <div class="row">
-                    <div class="col-lg-6 ms-auto">
-                        <h1>Kara Fang</h1>
-                        <p>Software Engineer</p>
-                        <p>My name is Kara, a Computer Programming graduate with a production management background in manufacturing industry.
-                           I am passionate about building things on the web and see them go alive.
-                        </p>
-                        <button onclick="window.location.href='https://drive.google.com/file/d/17CaqsF3n1DhWoehKVTrcI-b8oRfObdDE/view?usp=sharing';" type="button" class="btn btn-outline-light btn-lg homepage-btn"><i class="fa-regular fa-file"></i></i> Resume</button>
-                        <button onclick="window.location.href='mailto:Kara.fang1@gmail.com';" type="button" class="btn btn-outline-light btn-lg homepage-btn"><i class="fa-regular fa-message"></i> Contact me</button>
+            <div class="container">
+              <div class="form">
+                <div class="contact-info">
+                  <h3 class="title">Let's get in touch</h3>
+                  <p class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                    dolorum adipisci recusandae praesentium dicta!
+                  </p>
+
+                  <div class="info">
+                    <div class="information">
+                      <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                      <p>Toronto, ON, CA</p>
                     </div>
-    
-                    <div class="col-lg-6 ms-auto">
-                        <img class="home-img" src="images/Photo1.png" alt="Kara, bio picture">
+                    <div class="information">
+                      <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                      <p>kara.fang1@gmail.com</p>
                     </div>
+                    <div class="information">
+                      <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                      <p>+1(437)989-6552</p>
+                    </div>
+                  </div>
+
+                  <div class="social-media">
+                    <div class="social-icons">
+                      <a href="#">
+                        <i class="fab fa-instagram"></i>
+                      </a>
+                      <a href="#">
+                        <i class="fab fa-linkedin-in"></i>
+                      </a>
+                      <a href="#">
+                        <i class="fab fa-github"></i>
+                      </a>
+                    </div>
+                  </div>
                 </div>
+
+                <div class="contact-form">
+
+                  <form action="index.html" autocomplete="off">
+                    <h3 class="title">Contact me</h3>
+                    <div class="input-container">
+                      <input type="text" require="required" name="fname" class="input" />
+                      <span>First Name</span>
+                      <!-- <label for="">First Name</label> -->
+                    </div>
+                    <div class="input-container">
+                      <input type="text" require="required" name="lname" class="input" />
+                      <span>Last Name</span>
+                      <!-- <label for="">Last Name</label> -->
+                    </div>
+                    <div class="input-container">
+                      <input type="email" require="required" name="email" class="input" />
+                      <span>Email</span>
+                      <!-- <label for="">Email</label> -->
+                    </div>
+                    <div class="input-container textarea">
+                      <textarea name="message" require="required" class="input"></textarea>
+                      <span>Message</span>
+                      <!-- <label for="">Message</label> -->
+                    </div>
+                    <input type="submit" value="send" class="btn btn-outline-light btn-lg" />
+                  </form>
+                </div>
+              </div>
             </div>
+
+            <script src="app.js"></script>
         </section>
     </body>
 
