@@ -179,7 +179,7 @@ textarea.input {
   overflow-y: auto;
 }
 
-.contact-form .input-container span {
+.contact-form .input-container label {
     position: absolute;
     left: 8%;
     padding: 1px 5px;
@@ -190,7 +190,18 @@ textarea.input {
     transition: 1s;
     transform: translateY(-20px);
   }
+
+  .contact-form .input-container span {
+    position: absolute;
+    right: 17px;
+    font-size: 12px;
+    color: red;
+  }
   
+  .contact-form .input-container span i {
+    color: seagreen;
+  }
+
 /* Remove chrome autofill color from inputs */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,

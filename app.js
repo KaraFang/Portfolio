@@ -13,7 +13,7 @@ const app = express();
 // Set View's\
 app.set('views', './views');
 app.set('view engine', 'ejs');
-
+app.use(express.static('public'));
 
 // Static Files
 app.use(bodyParser.urlencoded({extended: true}));

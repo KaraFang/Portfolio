@@ -42,27 +42,34 @@
 
                 <div class="contact-form">
 
-                  <form action="index.html" autocomplete="off">
+                  <form action="https://formsubmit.co/kara.fang1@gmail.com" method="POST" autocomplete="off">
                     <h3 class="title">Contact me</h3>
+                    <!-- Honeypot -->
+                    <input type=""text" name="_honey" style="display: none;">
+
+                    <!-- Disable Captcha -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://karafang.com/success.html">
+
                     <div class="input-container">
-                      <input type="text" require="required" name="fname" class="input" />
-                      <span>First Name</span>
-                      <!-- <label for="">First Name</label> -->
+                      <label for="">First Name</label>
+                      <input type="text" placeholder="Enter your name" name="First&nbsp;Name" class="input" id="contact-name" onkeyup="validateName()"/>
+                      <span id="name-error"></span>
                     </div>
                     <div class="input-container">
-                      <input type="text" require="required" name="lname" class="input" />
+                      <label for="">Last Name</label>
+                      <input type="text" name="Last&nbsp;Name" class="input" required/>
                       <span>Last Name</span>
-                      <!-- <label for="">Last Name</label> -->
                     </div>
                     <div class="input-container">
-                      <input type="email" require="required" name="email" class="input" />
                       <span>Email</span>
-                      <!-- <label for="">Email</label> -->
+                      <input type="email" name="Email" class="input" required/>
+                      <label for="">Email</label>
                     </div>
                     <div class="input-container textarea">
-                      <textarea name="message" require="required" class="input"></textarea>
                       <span>Message</span>
-                      <!-- <label for="">Message</label> -->
+                      <textarea name="Message" class="input" required></textarea>
+                      <label for="">Message</label>
                     </div>
                     <input type="submit" value="send" class="btn btn-outline-light btn-lg" />
                   </form>
@@ -70,8 +77,9 @@
               </div>
             </div>
 
-            <script src="app.js"></script>
         </section>
+        <script src="app.js"></script>
+        <script src="script.js"></script>
     </body>
 
 <%- include("partials/footer.ejs"); -%> 
