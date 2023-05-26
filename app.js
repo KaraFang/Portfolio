@@ -40,6 +40,9 @@ app.get("/contact", (req, res) => {
     res.render(__dirname + '/views/contact');
 });
 
+app.get("/contact-success", (req, res) => {
+    res.render(__dirname + '/views/contact-success');
+});
 
 // Heroku port
 let port = process.env.PORT;

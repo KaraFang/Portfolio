@@ -6,8 +6,12 @@
                 <div class="contact-info">
                   <h3 class="title">Let's get in touch</h3>
                   <p class="text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-                    dolorum adipisci recusandae praesentium dicta!
+                    Want to connect?
+                    <br>
+                    <br>
+                    Feel free to shoot me a message if you have questions for me,
+                    or you can simply drop by to say hi.
+                    I will get back to you as soon as I can.
                   </p>
 
                   <div class="info">
@@ -43,43 +47,41 @@
                 <div class="contact-form">
 
                   <form action="https://formsubmit.co/kara.fang1@gmail.com" method="POST" autocomplete="off">
-                    <h3 class="title">Contact me</h3>
+                    <h3 class="title">Message me</h3>
                     <!-- Honeypot -->
                     <input type=""text" name="_honey" style="display: none;">
 
                     <!-- Disable Captcha -->
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://karafang.com/success.html">
+                    <input type="hidden" name="_next" href="/contact-success">
 
                     <div class="input-container">
                       <label for="">First Name</label>
-                      <input type="text" placeholder="Enter your name" name="First&nbsp;Name" class="input" id="contact-name" onkeyup="validateName()"/>
-                      <span id="name-error"></span>
+                      <input type="text" name="First&nbsp;Name" class="input" id="contact-fname" onkeyup="validateFName()">
+                      <span id="fname-error"></span>
                     </div>
                     <div class="input-container">
                       <label for="">Last Name</label>
-                      <input type="text" name="Last&nbsp;Name" class="input" required/>
-                      <span>Last Name</span>
+                      <input type="text" name="Last&nbsp;Name" class="input" id="contact-lname" onkeyup="validateLName()">
+                      <span id="lname-error"></span>
                     </div>
                     <div class="input-container">
-                      <span>Email</span>
-                      <input type="email" name="Email" class="input" required/>
                       <label for="">Email</label>
+                      <input type="email" name="Email" class="input" id="contact-email" onkeyup="validateEmail()">
+                      <span id="email-error"></span>
                     </div>
                     <div class="input-container textarea">
-                      <span>Message</span>
-                      <textarea name="Message" class="input" required></textarea>
                       <label for="">Message</label>
+                      <textarea name="Message" class="input" id="contact-msg" onkeyup="validateMsg()"></textarea>
+                      <span id="msg-error"></span>
                     </div>
                     <input type="submit" value="send" class="btn btn-outline-light btn-lg" />
                   </form>
                 </div>
               </div>
             </div>
-
         </section>
-        <script src="app.js"></script>
-        <script src="script.js"></script>
+        <script src="/script.js"></script>
     </body>
 
 <%- include("partials/footer.ejs"); -%> 
