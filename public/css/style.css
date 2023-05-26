@@ -199,13 +199,16 @@ textarea.input {
     left: 20px;
     bottom: -18px;
     font-size: 12px;
-    color: red;
+    color: rgb(211, 104, 104);
   }
   
   .contact-form .input-container span i {
     color: seagreen;
   }
 
+  #submit-error {
+    color: rgb(211, 104, 104);
+  }
 /* Remove chrome autofill color from inputs */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,

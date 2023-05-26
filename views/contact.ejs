@@ -75,7 +75,8 @@
                       <textarea name="Message" class="input" id="contact-msg" onkeyup="validateMsg()"></textarea>
                       <span id="msg-error"></span>
                     </div>
-                    <input type="submit" value="send" class="btn btn-outline-light btn-lg" />
+                    <button onclick="return validateForm()" class="btn btn-outline-light btn-lg">Submit</button>
+                    <span id="submit-error"></span>
                   </form>
                 </div>
               </div>

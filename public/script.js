@@ -2,6 +2,7 @@ var fNameError = document.getElementById('fname-error');
 var lNameError= document.getElementById('lname-error');
 var emailError = document.getElementById('email-error');
 var msgError = document.getElementById('msg-error');
+var submitError = document.getElementById('submit-error');
 
 function validateFName() {
     var name = document.getElementById('contact-fname').value;
@@ -58,4 +59,13 @@ function validateMsg() {
     }
     msgError.innerHTML = '<i class="fas fa-check-circle"></i>';
     return true;
+}
+
+function validateForm() {
+    if(!validateFName() || !validateLName() || !validateEmail() || !validateMsg()) {
+        submitError.style.display = 'block';
+        submitError.innerHTML = 'Correct fields before submitting';
+        setTimeout(function(){submitError.style.display = 'none';}, 6000);
+        return false;
+    }
 }
