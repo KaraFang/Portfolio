@@ -62,7 +62,7 @@ body {
   margin-top: 6rem;
   width: 100%;
   min-height: 70vh;
-  padding: 8rem 9rem;
+  padding: 8rem 3rem;
 }
 
 /* Text */
@@ -90,8 +90,8 @@ p {
 
 /* Home Page Image */
 .home-img {
-  width: 300px;;
-  transform: rotate(5deg);
+  width:300px;
+  transform: rotate(1deg);
   padding: 30px 0 0;
 }
 
