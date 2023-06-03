@@ -1,7 +1,10 @@
-
 /* Global Variables */
 * {
-  font-family: 'JetBrains Mono';
+  font-family: 'JetBrains Mono', 'Averia Sans Libre';
+}
+
+a:hover, a:focus, a:active, a:visited, a:link{
+    text-decoration: none;
 }
 
 body {
@@ -39,7 +42,7 @@ body {
   z-index: 1000;
   background-color: #09131B;
   width: 100%;
-  padding: 1.5rem 5rem;
+  padding: 1.5rem 3rem;
   --bs-navbar-nav-link-padding-x: 1.5rem;
 }
 
@@ -90,7 +93,7 @@ p {
 
 /* Home Page Image */
 .home-img {
-  width:300px;
+  width: 300px;;
   transform: rotate(1deg);
   padding: 30px 0 0;
 }
