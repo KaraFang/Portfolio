@@ -9,7 +9,6 @@ const ejs = require("ejs");
 // const mongoose = require("mongoose");
 const app = express();
 
-
 // Set View's\
 app.set('views', './views');
 app.set('view engine', 'ejs');
