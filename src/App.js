@@ -6,7 +6,7 @@ import Projects from './pages/Projects';
 
 function App() {
   return (
-    <div className="bg-defaultdarksky w-full overflow-hidden">
+    <div className="bg-defaultteal dark:bg-defaultsky w-full overflow-hidden">
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
             <div className={`${styles.boxWidth}`}>
                 <Navbar />

@@ -2,6 +2,8 @@ import React from 'react'
 import close from '../assets/images/close.svg';
 import menu from '../assets/images/menu.svg';
 import logo from '../assets/images/logo.png';
+import { FaMoon, FaSun } from 'react-icons/fa';
+import useDarkMode from './useDarkMode';
 import { useState } from 'react';
 import { navLinks } from '.';
 
@@ -11,6 +13,7 @@ const Navbar = () => {
   return (
     <div className="w-full flex py-6 justify-between items-center navbar">
       <img src={logo} alt="logo" className="w-[32px] h-[32px]" />
+      <ThemeIcon />
 
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
@@ -61,5 +64,19 @@ const Navbar = () => {
     </div>
   );
 }
+
+const ThemeIcon = () => {
+    const [darkTheme, setDarkTheme] = useDarkMode();
+    const handleMode = () => setDarkTheme(!darkTheme);
+    return (
+      <span onClick={handleMode}>
+        {darkTheme ? (
+          <FaSun size='24' className='navbar-icon text-defaultsky hover:text-defaultamber' />
+        ) : (
+          <FaMoon size='24' className='navbar-icon text-defaultamber hover:text-defaultsky' />
+        )}
+      </span>
+    );
+};
 
 export default Navbar

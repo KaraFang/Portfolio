@@ -2,10 +2,11 @@
 module.exports = {
   mode: 'jit',
   content: ["./src/**/*.{html,js}"],
+  darkMode: 'class',
   theme: {
     extend: {
         colors: {
-            defaultdarksky: '#09131B',
+            defaultsky: '#09131B',
             defaultamber: '#FFF7AD',
             defaultteal: '#8DF1C9',
         }
