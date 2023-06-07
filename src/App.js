@@ -1,7 +1,8 @@
 import './App.css';
 import styles from './styles';
-import { Navbar, Footer } from '../components';
-// import { Home, Projects }from './pages';
+import { Navbar, Footer } from './components';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
 
 function App() {
   return (
@@ -14,13 +15,13 @@ function App() {
 
         <div className={`bg-primary ${styles.flexStart}`}>
             <div className={`${styles.boxWidth}`}>
-                {/* <Home /> */}
+                <Home />
             </div>
         </div>
 
         <div className={`bg-primary ${styles.flexStart}`}>
             <div className={`${styles.boxWidth}`}>
-                {/* <Projects /> */}
+                <Projects />
             </div>
         </div>
 
