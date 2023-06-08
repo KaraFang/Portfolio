@@ -40,3 +40,9 @@ a:hover, a:focus, a:active, a:visited, a:link{
     transform: rotate(360deg);
   }
 }
+
+h1 {
+    color: aliceblue;
+    font-size: 5rem;
+    font-family: "Space Mono", monospace;
+}
