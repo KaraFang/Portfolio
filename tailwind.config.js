@@ -9,6 +9,10 @@ module.exports = {
             defaultsky: '#09131B',
             defaultamber: '#FFF7AD',
             defaultteal: '#8DF1C9',
+        },
+        fontFamily: {
+            mono: ['JetBrains Mono'],
+            libre: ['Averia Sans Libre'],
         }
     },
   },

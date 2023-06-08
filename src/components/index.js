@@ -8,6 +8,7 @@ import linkedin from "../assets/images/linkedin.svg";
 import instagram from "../assets/images/instagram.svg";
 import twitter from "../assets/images/twitter.svg";
 
+
 export {
   Navbar,
   Home,

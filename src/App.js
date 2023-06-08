@@ -6,26 +6,26 @@ import Projects from './pages/Projects';
 
 function App() {
   return (
-    <div className="bg-defaultteal dark:bg-defaultsky w-full overflow-hidden">
-        <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+    <div className="w-full overflow-hidden">
+        <div className={`bg-defaultteal dark:bg-defaultsky ${styles.paddingX} ${styles.flexCenter}`}>
             <div className={`${styles.boxWidth}`}>
                 <Navbar />
             </div>
         </div>
 
-        <div className={`bg-primary ${styles.flexStart}`}>
+        <div className={`bg-defaultteal dark:bg-defaultsky ${styles.flexCenter}`}>
             <div className={`${styles.boxWidth}`}>
                 <Home />
             </div>
         </div>
 
-        <div className={`bg-primary ${styles.flexStart}`}>
+        <div className={`bg-defaultteal dark:bg-defaultsky ${styles.flexStart}`}>
             <div className={`${styles.boxWidth}`}>
-                <Projects />
+                {/* <Projects /> */}
             </div>
         </div>
 
-        <div className={`bg-primary ${styles.flexStart}`}>
+        <div className={`bg-defaultsky ${styles.flexStart}`}>
             <div className={`${styles.boxWidth}`}>
                 <Footer />
             </div>
