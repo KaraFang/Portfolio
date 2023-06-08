@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <div className="w-full flex py-6 justify-between items-center navbar">
-        <img src={logo} alt="logo" className="w-[32px] h-[32px]" />
+        <img src={logo} alt="logo" className="w-[42px] h-[42px]" />
 
       <div>
         <ul className="list-none sm:flex hidden justify-end items-center flex-1">
@@ -20,7 +20,7 @@ const Navbar = () => {
             <li
               key={nav.id}
               className={`font-mono font-normal cursor-pointer
-                      text-[16px] ${
+                      text-[18px] ${
                         index === navLinks.length - 1 ? "mr-0" : "mr-10"
                       }
                       dark:text-defaultteal`}
@@ -38,7 +38,7 @@ const Navbar = () => {
         <img
           alt="menu"
           src={toggle ? close : menu}
-          className="w-[28px] h-[28px]
+          className="w-[32px] h-[32px]
                     object-contain"
           onClick={() => setToggle((prev) => !prev)}
         />
@@ -58,7 +58,7 @@ const Navbar = () => {
             {navLinks.map((nav, index) => (
               <li
                 key={nav.id}
-                className={`font-mono font-normal cursor-pointer text-[16px] ${
+                className={`font-mono font-normal cursor-pointer text-[18px] ${
                   index === navLinks.length - 1 ? "mr-0" : "mb-4"
                 }
                 text-defaultsky dark:text-defaultteal`}
