@@ -9,7 +9,7 @@ const Home = () => {
 
         <div className="flex flex-row justify-between items-center">
           <h1 className="flex-none font-libre text-defaultamber font-semibold text-justify
-          lg:text-[70px] sm:text-[45px] text-[40px]
+          lg:text-[70px] text-[40px]
           lg:leading-[100px] sm:leading-[70px] leading-[60px]">
             KARA FANG<br/>WEB DEVELOPER
           </h1>
@@ -26,6 +26,7 @@ const Home = () => {
       <div className={`flex ${styles.flexCenter} flex-col xl:px-16 sm:px-10 px-6`}>
         <img className="object-contain lg:w-80 lg:h-80 sm:w-64 sm:h-64 w-48 h-48" src={Kara} alt="Kara" />
       </div>
+
     </section>
   );
 };

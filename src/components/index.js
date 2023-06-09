@@ -1,6 +1,7 @@
 import Navbar from "./Navbar";
 import Home from "../pages/Home";
 import Projects from "../pages/Projects";
+import Gallery from "./Gallery";
 import ContactMe from "../pages/ContactMe";
 import Footer from "./Footer";
 import github from "../assets/images/github.svg";
@@ -12,6 +13,7 @@ import twitter from "../assets/images/twitter.svg";
 export {
   Navbar,
   Home,
+  Gallery,
   Projects,
   ContactMe,
   Footer,
