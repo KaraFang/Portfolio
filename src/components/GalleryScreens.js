@@ -1,14 +1,12 @@
 import React from 'react';
-import styles from '../styles';
 import { FaCodepen } from 'react-icons/fa';
 
 const GalleryScreens = () => {
   return (
     <section
       id="gallery-screens"
-      className={`flex md:flex-row justify-center flex-col gap-8 ${styles.paddingY}`}
     >
-      <div className="screen">
+      <div className="screen w-[300px]">
         <div className="screen-image"></div>
         <div className="screen-overlay"></div>
         <div className="screen-content">

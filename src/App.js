@@ -27,8 +27,8 @@ function App() {
         </div>
       </div>
 
-      <div className={`bg-defaultteal dark:bg-defaultsky ${styles.flexStart} ${styles.paddingYY}`}
-        onMouseMove={handleMouseMove} style={{ position: 'relative' }}
+      <div className={`gallery-container bg-defaultteal dark:bg-defaultsky ${styles.flexCenter}`}
+        onMouseMove={handleMouseMove}
       >
         <div id="blob" style={{ left: blobPosition.x, top: blobPosition.y }}></div>
         <div id="blur"></div>

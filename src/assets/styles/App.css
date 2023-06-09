@@ -13,6 +13,10 @@ a:hover, a:focus, a:active, a:visited, a:link{
   text-decoration: none;
 }
 
+.gallery-container {
+    position: relative;
+    overflow: hidden;
+}
 
 @keyframes rotate {
   from {
@@ -38,6 +42,7 @@ a:hover, a:focus, a:active, a:visited, a:link{
   background: linear-gradient(to right, var(--blob-color-1), var(--blob-color-2));
   animation: rotate 20s infinite;
   opacity: 0.5;
+  z-index: 1;
   transition: left 1s ease-out, top 1s ease-out;
 }
   
@@ -52,7 +57,7 @@ a:hover, a:focus, a:active, a:visited, a:link{
     z-index: 2;
     backdrop-filter: blur(12vmax);
 }
-/* 
-h1 {
+
+/* h1 {
     font-family: "Space Mono", monospace;
 } */
