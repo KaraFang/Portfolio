@@ -9,7 +9,7 @@ const Gallery = () => {
     <section id="gallery"
       className={`flex flex-col justify-center`}
     >
-      <div>
+      <div className='title z-[4]'>
         <h1 className="font-libre text-defaultamber py-16
         font-bold text-center sm:text-[90px] text-[40px]"
           >
