@@ -27,7 +27,7 @@ function App() {
         </div>
       </div>
 
-      <div className={`gallery-container bg-defaultteal dark:bg-defaultsky ${styles.flexCenter}`}
+      <div className={`gallery-container bg-defaultteal dark:bg-defaultsky ${styles.flexCenter} ${styles.paddingY}`}
         onMouseMove={handleMouseMove}
       >
         <div id="blob" style={{ left: blobPosition.x, top: blobPosition.y }}></div>

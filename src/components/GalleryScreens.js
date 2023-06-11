@@ -6,7 +6,7 @@ const GalleryScreens = () => {
     <section
       id="gallery-screens"
     >
-      <div className="screen w-[300px] z-[4]">
+      <div className="screen w-[250px] z-[4] hover:scale-110">
         <div className="screen-image"></div>
         <div className="screen-overlay"></div>
         <div className="screen-content">

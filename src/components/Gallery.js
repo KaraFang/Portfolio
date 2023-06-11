@@ -10,7 +10,7 @@ const Gallery = () => {
       className={`flex flex-col justify-center`}
     >
       <div className='title z-[4]'>
-        <h1 className="font-libre text-defaultamber py-16
+        <h1 className="font-libre text-defaultamber
         font-bold text-center sm:text-[90px] text-[40px]"
           >
             Projects Gallery
@@ -18,7 +18,7 @@ const Gallery = () => {
       </div>
 
       <div
-        className={`flex flex-wrap justify-center items-center py-16 gap-8`}
+        className={`flex flex-wrap justify-center items-center py-16 sm:gap-16`}
       >
         <GalleryScreens />
         <GalleryScreens />

@@ -3,15 +3,15 @@ import logo from '../assets/images/logo.png';
 import { socialMedia } from './index';
 
 const Footer = () => (
-  <section className={`${styles.flexCenter} ${styles.paddingY} flex-col gap-6`}>
+  <section className={`${styles.flexCenter} sm:py-10 py-6 flex-col gap-6`}>
     <div className="w-full flex justify-center items-center md:flex-row">
       {socialMedia.map((social, index) => (
         <img
           key={social.id}
           src={social.icon}
           alt={social.id}
-          className={`w-[21px] h-[21px] object-contain cursor-pointer ${
-            index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
+          className={`w-[26px] h-[26px] object-contain cursor-pointer hover:scale-125 ${
+            index !== socialMedia.length - 1 ? "mr-10" : "mr-0"
           }`}
           onClick={() => window.open(social.link)}
         />
