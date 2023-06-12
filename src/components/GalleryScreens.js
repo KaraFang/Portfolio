@@ -13,7 +13,7 @@ const GalleryScreens = () => {
           <FaCodepen className="screen-icon"/>
           <div className="screen-user">
             <span className="name" data-value="FITCOACH">
-              FITCOACD
+              FITCOACH
             </span>
             <a
               className="link"
@@ -28,5 +28,6 @@ const GalleryScreens = () => {
     </section>
   );
 };
+
 
 export default GalleryScreens;
