@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../styles';
-import GalleryScreens from './GalleryScreens';
 import '../assets/styles/Gallery.css';
+import ScreenList from './ScreenList';
 
 const Gallery = () => {
 
@@ -20,9 +20,7 @@ const Gallery = () => {
       <div
         className={`flex flex-wrap justify-center items-center py-16 sm:gap-16`}
       >
-        <GalleryScreens />
-        <GalleryScreens />
-        <GalleryScreens />
+        <ScreenList />
       </div>
     </section>
   );

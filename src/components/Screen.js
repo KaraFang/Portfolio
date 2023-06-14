@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaCodepen } from 'react-icons/fa';
 
-const GalleryScreens = () => {
+const Screen = ({ name, link }) => {
   return (
     <section
       id="gallery-screens"
@@ -12,12 +12,12 @@ const GalleryScreens = () => {
         <div className="screen-content">
           <FaCodepen className="screen-icon"/>
           <div className="screen-user">
-            <span className="name" data-value="FITCOACH">
-              FITCOACH
+            <span className="name" data-value='name'>
+              {name}
             </span>
             <a
               className="link"
-              href="https://youtube.com/@Hyperplexed"
+              href={link}
               rel="opener"
             >
               @Hyperplexed
@@ -29,5 +29,4 @@ const GalleryScreens = () => {
   );
 };
 
-
-export default GalleryScreens;
+export default Screen;
