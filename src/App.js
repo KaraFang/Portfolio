@@ -69,6 +69,6 @@ export const MoveBlob = () => {
         />
       </div>
     );
-  };
+}
 
 export default App;

@@ -27,6 +27,6 @@ const Screen = ({ name, link }) => {
       </div>
     </section>
   );
-};
+}
 
 export default Screen;
