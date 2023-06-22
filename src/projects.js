@@ -7,8 +7,14 @@ export const projects = [
   },
   {
     id: 2,
-    name: 'FITCOACH',
+    name: 'FIT COACH',
     link: '123',
-    github: '';
+    github: '',
+  },
+  {
+    id: 3,
+    name: 'DIABLO4 LFG',
+    link: 'XXX',
+    github: '',
   },
 ];

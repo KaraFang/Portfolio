@@ -18,7 +18,7 @@ const Gallery = () => {
       </div>
 
       <div
-        className={`flex flex-wrap justify-center items-center py-16 sm:gap-16`}
+        className="flex justify-center items-center py-16 mx-10"
       >
         <ScreenList />
       </div>

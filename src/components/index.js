@@ -41,9 +41,9 @@ export const navLinks = [
       link: "https://github.com/KaraFang",
     },
     {
-        id: "social-media-2",
-        icon: linkedin,
-        link: "https://www.linkedin.com/in/kara-fang-6202b6167/",
+      id: "social-media-2",
+      icon: linkedin,
+      link: "https://www.linkedin.com/in/kara-fang-6202b6167/",
     },
     {
       id: "social-media-3",

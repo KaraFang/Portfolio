@@ -6,7 +6,8 @@ const Screen = ({ name, link }) => {
     <section
       id="gallery-screens"
     >
-      <div className="screen w-[250px] z-[4] hover:scale-110">
+      <div className="screen w-[280px] z-[4] hover:scale-110"
+      >
         <div className="screen-image"></div>
         <div className="screen-overlay"></div>
         <div className="screen-content">
