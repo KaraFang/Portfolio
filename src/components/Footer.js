@@ -1,6 +1,6 @@
 import styles from '../styles';
 import logo from '../assets/images/logo.png';
-import { socialMedia } from './index';
+import { socialMedia } from './links';
 
 const Footer = () => (
   <section className={`${styles.flexCenter} sm:py-10 py-6 flex-col gap-6`}>

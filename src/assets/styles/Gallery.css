@@ -1,10 +1,10 @@
 :root {
     --background-rgb: 29 30 34;
     
-    --blue-rgb: 141 241 201;
-    --primary-rgb: var(--blue-rgb);
+    --teal-rgb: 141 241 201;
+    --primary-rgb: var(--teal-rgb);
     
-    --blob-color-1: rgb(var(--blue-rgb));
+    --blob-color-1: rgb(var(--teal-rgb));
     --blob-color-2: dodgerblue;
 }
 
@@ -26,7 +26,7 @@
   z-index: 4;
   left: 50%;
   translate: -50% 0%;
-  background-color: white;
+  background-color: #8DF1C9;
 }
 
 .screen:before {
@@ -123,7 +123,6 @@
 }
 
 .screen > .screen-image {
-  background-image: url("https://images.unsplash.com/photo-1515266591878-f93e32bc5937?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80");
   height: 100%;
   width: 100%;
   position: absolute;
@@ -153,7 +152,7 @@
 }
 
 .screen > .screen-content > .screen-icon {
-  color: white;
+  color: #8DF1C9;
   font-size: 4rem;
   text-shadow: 0px 0px 0.5rem white;
 }
@@ -190,7 +189,6 @@
 }
 
 .screen > .screen-content > .screen-user > :is(.name, .link) {
-  font-family: "Source Code Pro", monospace;
   color: white; 
   text-align: center;
   text-transform: uppercase; 
@@ -224,7 +222,7 @@
 
 .screen > .screen-content > .screen-user > .link {  
   opacity: 0.8;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-shadow: 0px 0px 0.5rem white;
   font-weight: 400;
   letter-spacing: 0.3rem;

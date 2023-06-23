@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './assets/styles/App.css';
 import styles from './styles';
-import { Navbar, Footer, Gallery } from './components';
+import { Navbar, Footer } from './components/links';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 
@@ -33,7 +33,7 @@ function App() {
         <div id="blob" style={{ left: blobPosition.x, top: blobPosition.y }}></div>
         <div id="blur"></div>
         <div className={`${styles.boxWidth}`}>
-          <Gallery />
+          <Projects />
         </div>
       </div>
 

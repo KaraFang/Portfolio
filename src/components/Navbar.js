@@ -5,7 +5,7 @@ import logo from '../assets/images/logo.png';
 import useDarkMode from './useDarkMode';
 import { FaMoon, FaSun, FaHamburger, FaChevronCircleUp } from 'react-icons/fa';
 import { useState } from 'react';
-import { navLinks } from '.';
+import { navLinks } from './links';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);

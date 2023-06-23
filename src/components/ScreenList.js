@@ -10,7 +10,9 @@ const ScreenList = () => {
               <Screen
                 key={user.id}
                 name={user.name}
-                link={user.link}
+                bgimg={user.bgimg}
+                website={user.website}
+                github={user.github}
               />
             );
         })}

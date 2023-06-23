@@ -33,7 +33,7 @@ const Home = () => {
 
 const Hype = ({ initialText }) => {
     const [text, setText] = useState(initialText);
-    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
   
     const handleMouseOver = (event) => {
       let iterations = 0;

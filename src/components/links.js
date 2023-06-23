@@ -1,19 +1,17 @@
 import Navbar from "./Navbar";
 import Home from "../pages/Home";
 import Projects from "../pages/Projects";
-import Gallery from "./Gallery";
 import ContactMe from "../pages/ContactMe";
 import Footer from "./Footer";
 import github from "../assets/images/github.svg";
 import linkedin from "../assets/images/linkedin.svg";
 import instagram from "../assets/images/instagram.svg";
-import twitter from "../assets/images/twitter.svg";
+// import twitter from "../assets/images/twitter.svg";
 
 
 export {
   Navbar,
   Home,
-  Gallery,
   Projects,
   ContactMe,
   Footer,
@@ -28,10 +26,10 @@ export const navLinks = [
       id: "projects",
       title: "Projects",
     },
-    {
-      id: "contactMe",
-      title: "Contact Me",
-    },
+    // {
+    //   id: "contactMe",
+    //   title: "Contact Me",
+    // },
   ];
 
   export const socialMedia = [
