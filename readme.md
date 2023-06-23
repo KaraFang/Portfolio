@@ -3,7 +3,7 @@
   <a href="https://www.karafang.com" target="_blank">karafang.com</a>
 </h1>
 <div align="center">
-  <img alt="logo" width="60" height="60" src="./public/images/Logo4.png"/>
+  <img alt="logo" width="60" height="60" src="./public/images/logo.png"/>
 </div>
 
 <br/>
