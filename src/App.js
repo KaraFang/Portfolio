@@ -6,12 +6,19 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 
 function App() {
-    const [blobPosition, setBlobPosition] = useState({ x: 0, y: 0 });
+  const [blobPosition, setBlobPosition] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (event) => {
     const { clientX, clientY } = event;
     setBlobPosition({ x: clientX, y: clientY });
   };
+
+  const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const rootElement = document.getElementById('root');
+
+  if (prefersDarkMode) {
+    rootElement.classList.add('dark');
+  }
 
   return (
     <div className="w-full overflow-hidden">
