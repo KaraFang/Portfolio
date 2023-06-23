@@ -33,6 +33,6 @@ The project was built with the following technologies.
 - CSS3
 - Node.js
 - Express.js
-- ejs.js
-- Bootstraps
-- Heroku
+- React.js
+- Tailwind
+- Vercel
