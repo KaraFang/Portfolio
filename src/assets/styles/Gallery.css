@@ -2,7 +2,9 @@
     --background-rgb: 29 30 34;
     
     --teal-rgb: 141 241 201;
+    --sky-rgb: 9 19 27;
     --primary-rgb: var(--teal-rgb);
+    --bg-rgb: var(--sky-rgb);
     
     --blob-color-1: rgb(var(--teal-rgb));
     --blob-color-2: dodgerblue;

@@ -7,7 +7,7 @@
 body, html {
   min-height: 100vh;
 
-  }
+}
 
 a:hover, a:focus, a:active, a:visited, a:link{
   text-decoration: none;

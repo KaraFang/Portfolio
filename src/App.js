@@ -13,13 +13,6 @@ function App() {
     setBlobPosition({ x: clientX, y: clientY });
   };
 
-  const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const rootElement = document.getElementById('root');
-
-  if (prefersDarkMode) {
-    rootElement.classList.add('dark');
-  }
-
   return (
     <div className="w-full overflow-hidden">
       <div className={`bg-defaultteal dark:bg-defaultsky ${styles.paddingX} ${styles.flexCenter}`}>

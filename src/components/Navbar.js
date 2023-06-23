@@ -9,7 +9,7 @@ import { navLinks } from './links';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
-
+  
   return (
     <div className="w-full flex py-6 justify-between items-center navbar">
         <img src={logo} alt="logo" className="w-[42px] h-[42px]" />
