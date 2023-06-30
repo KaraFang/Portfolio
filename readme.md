@@ -3,7 +3,7 @@
   <a href="https://www.karafang.com" target="_blank">karafang.com</a>
 </h1>
 <div align="center">
-  <img alt="logo" width="60" height="60" src="./public/images/Logo4.png"/>
+  <img alt="logo" width="60" height="60" src="./src/assets/images/logo.png"/>
 </div>
 
 <br/>
@@ -33,6 +33,6 @@ The project was built with the following technologies.
 - CSS3
 - Node.js
 - Express.js
-- ejs.js
-- Bootstraps
-- Heroku
+- React.js
+- Tailwind
+- Vercel
