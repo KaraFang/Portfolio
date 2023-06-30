@@ -12,7 +12,7 @@ const Screen = ({ name, bgimg, website, github }) => {
         <div className="screen-overlay"></div>
         <div className="screen-content">
           <FaRegLightbulb className="screen-icon"/>
-          <div className="screen-user font-mono">
+          <div className="screen-user">
             <span className="name" data-value='name'>
               {name}
             </span>

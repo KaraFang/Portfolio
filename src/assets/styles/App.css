@@ -6,7 +6,7 @@
 
 body, html {
   min-height: 100vh;
-
+  font-family: JetBrains Mono;
 }
 
 a:hover, a:focus, a:active, a:visited, a:link{

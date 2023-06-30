@@ -19,13 +19,13 @@ function App() {
         </div>
       </div>
 
-      <div className={`bg-defaultteal dark:bg-defaultsky ${styles.flexCenter} ${styles.paddingY}`}>
+      <div className={`bg-defaultteal dark:bg-defaultsky ${styles.flexCenter} ${styles.paddingYY}`}>
         <div className={`${styles.boxWidth}`}>
           <Home />
         </div>
       </div>
 
-      <div className={`gallery-container bg-defaultteal dark:bg-defaultsky ${styles.flexCenter} ${styles.paddingYY}`}
+      <div className={`bg-defaultteal dark:bg-defaultsky gallery-container ${styles.flexCenter} ${styles.paddingYY}`}
         onMouseMove={handleMouseMove}
       >
         <div id="blob" style={{ left: blobPosition.x, top: blobPosition.y }}></div>
@@ -35,7 +35,7 @@ function App() {
         </div>
       </div>
 
-      <div className={`bg-defaultteal dark:bg-defaultsky ${styles.flexCenter} ${styles.paddingY}`}>
+      <div className={`bg-defaultteal dark:bg-defaultsky ${styles.flexCenter} ${styles.paddingYY}`}>
         <div className={`${styles.boxWidth}`}>
           <ContactMe />
         </div>

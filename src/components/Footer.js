@@ -19,7 +19,7 @@ const Footer = () => (
     </div>
 
     <div>
-      <p className="font-mono text-center text-[18px] leading-[27px] text-defaultteal">
+      <p className="text-center text-[18px] leading-[27px] text-defaultteal">
         © Copyright 2023 KaraFang. | All Rights Reserved.
       </p>
     </div>

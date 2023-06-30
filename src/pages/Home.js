@@ -9,7 +9,7 @@ const Home = () => {
 
         <div className="flex flex-row justify-between items-center">
           <h1 className="flex-none font-libre text-defaultamber font-semibold text-justify
-          lg:text-[70px] text-[40px]
+          lg:text-[70px] text-[50px]
           lg:leading-[100px] sm:leading-[70px] leading-[60px]">
             KARA FANG<br/>WEB DEVELOPER
           </h1>

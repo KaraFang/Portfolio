@@ -10,7 +10,7 @@ const Projects = () => {
     >
       <div className='title z-[4]'>
         <h1 className="font-libre text-defaultamber
-        font-bold text-center sm:text-[90px] text-[40px]"
+        font-bold text-center sm:text-[90px] text-[50px]"
           >
             Projects Gallery
         </h1>

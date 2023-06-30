@@ -19,7 +19,7 @@ const Navbar = () => {
           {navLinks.map((nav, index) => (
             <li
               key={nav.id}
-              className={`font-mono font-normal cursor-pointer
+              className={`font-normal cursor-pointer
                       text-[20px] ${
                         index === navLinks.length - 1 ? "mr-0" : "mr-10"
                       }
@@ -58,7 +58,7 @@ const Navbar = () => {
             {navLinks.map((nav, index) => (
               <li
                 key={nav.id}
-                className={`font-mono font-normal cursor-pointer text-[20px] ${
+                className={`font-normal cursor-pointer text-[20px] ${
                   index === navLinks.length - 1 ? "mr-0" : "mb-4"
                 }
                 text-defaultsky dark:text-defaultteal`}

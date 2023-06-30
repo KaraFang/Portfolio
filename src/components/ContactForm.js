@@ -1,4 +1,9 @@
-import React from 'react'
+import React from 'react';
+import '../assets/styles/ContactForm.css';
+import { FaPhone, FaEnvelope, FaMapMarkedAlt } from 'react-icons/fa';
+import github from "../assets/images/github.svg";
+import linkedin from "../assets/images/linkedin.svg";
+import instagram from "../assets/images/instagram.svg";
 
 const ContactForm = () => {
     return (
@@ -17,29 +22,29 @@ const ContactForm = () => {
 
               <div className="info">
                 <div className="information">
-                  <div className="icon"><i className="fa fa-map-marker" aria-hidden="true"></i></div>
+                  <div className="icon" aria-hidden="true"><FaMapMarkedAlt/></div>
                   <p>Toronto, ON, CA</p>
                 </div>
                 <div className="information">
-                  <div className="icon"><i className="fa fa-envelope" aria-hidden="true"></i></div>
+                  <div className="icon" aria-hidden="true"><FaEnvelope/></div>
                   <p>kara.fang1@gmail.com</p>
                 </div>
-                <div className="information">
-                  <div className="icon"><i className="fa fa-phone" aria-hidden="true"></i></div>
+                {/* <div className="information">
+                  <div className="icon" aria-hidden="true"><FaPhone/></div>
                   <p>+1(437)989-6552</p>
-                </div>
+                </div> */}
               </div>
 
               <div className="social-media">
                 <div className="social-icons">
                   <a href="https://github.com/KaraFang?tab=repositories">
-                    <i className="fab fa-github"></i>
+                    <img src={github} alt="Github" />
                   </a>
                   <a href="https://www.linkedin.com/in/kara-fang-6202b6167/">
-                      <i className="fab fa-linkedin-in"></i>
-                    </a>
+                     <img src={linkedin} alt="LinkedIn" />
+                  </a>
                   <a href="https://www.instagram.com/kara_180/">
-                    <i className="fab fa-instagram"></i>
+                    <img src={instagram} alt="Instagram" />
                   </a>
                 </div>
               </div>
