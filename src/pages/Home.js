@@ -4,7 +4,7 @@ import Kara from '../assets/images/Kara Fang.png';
 
 const Home = () => {
   return (
-    <section id="home" className={`flex md:flex-row justify-center flex-col gap-8 ${styles.paddingY}`}>
+    <section id="home" className={`flex sm:flex-row justify-center flex-col gap-8 ${styles.paddingY}`}>
       <div className={`flex ${styles.flexStart} flex-col lg:px-16 sm:px-10 px-6`}>
 
         <div className="flex flex-row justify-between items-center">

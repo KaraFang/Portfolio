@@ -26,10 +26,10 @@ export const navLinks = [
       id: "projects",
       title: "Projects",
     },
-    // {
-    //   id: "contactMe",
-    //   title: "Contact Me",
-    // },
+    {
+      id: "contactMe",
+      title: "Contact Me",
+    },
   ];
 
   export const socialMedia = [

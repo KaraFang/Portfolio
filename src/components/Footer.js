@@ -4,7 +4,7 @@ import { socialMedia } from './links';
 
 const Footer = () => (
   <section className={`${styles.flexCenter} sm:py-10 py-6 flex-col gap-6`}>
-    <div className="w-full flex justify-center items-center md:flex-row">
+    <div className="w-full flex justify-center items-center sm:flex-row">
       {socialMedia.map((social, index) => (
         <img
           key={social.id}
