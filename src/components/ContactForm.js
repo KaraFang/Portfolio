@@ -1,8 +1,7 @@
 import React from 'react'
 
 const ContactForm = () => {
-  return (
-    <section id="body">
+    return (
         <div className="container">
           <div className="form">
             <div className="contact-info">
@@ -81,8 +80,7 @@ const ContactForm = () => {
             </div>
           </div>
         </div>
-    </section>
-  );
+    );
 }
 
 var fNameError = document.getElementById('fname-error');

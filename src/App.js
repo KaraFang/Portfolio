@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import './assets/styles/App.css';
 import styles from './styles';
-import { Navbar, Footer } from './components/links';
-import Home from './pages/Home';
-import Projects from './pages/Projects';
+import { Navbar, Home, Footer, ContactMe, Projects } from './components/links';
 
 function App() {
   const [blobPosition, setBlobPosition] = useState({ x: 0, y: 0 });
@@ -27,13 +25,19 @@ function App() {
         </div>
       </div>
 
-      <div className={`gallery-container bg-defaultteal dark:bg-defaultsky ${styles.flexCenter} ${styles.paddingY}`}
+      <div className={`gallery-container bg-defaultteal dark:bg-defaultsky ${styles.flexCenter} ${styles.paddingYY}`}
         onMouseMove={handleMouseMove}
       >
         <div id="blob" style={{ left: blobPosition.x, top: blobPosition.y }}></div>
         <div id="blur"></div>
         <div className={`${styles.boxWidth}`}>
           <Projects />
+        </div>
+      </div>
+
+      <div className={`bg-defaultteal dark:bg-defaultsky ${styles.flexCenter} ${styles.paddingY}`}>
+        <div className={`${styles.boxWidth}`}>
+          <ContactMe />
         </div>
       </div>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/styles/Gallery.css';
+import '../assets/styles/Projects.css';
 import ScreenList from '../components/ScreenList';
 
 const Projects = () => {
