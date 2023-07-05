@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef  } from 'react';
 import '../assets/styles/ContactForm.css';
 import { FaPhone, FaEnvelope, FaMapMarkedAlt } from 'react-icons/fa';
 import github from "../assets/images/github.svg";
@@ -6,6 +6,79 @@ import linkedin from "../assets/images/linkedin.svg";
 import instagram from "../assets/images/instagram.svg";
 
 const ContactForm = () => {
+    const fNameError = useRef(null);
+    const lNameError = useRef(null);
+    const emailError = useRef(null);
+    const msgError = useRef(null);
+    const submitError = useRef(null);
+
+    const validateFName = () => {
+        var name = document.getElementById('contact-fname').value;
+    
+        if(name.length === 0) {
+            fNameError.current.innerHTML = 'First name is required';
+            return false;
+        }
+        if(!name.match(/^[a-zA-Z]+[- ']{0,1}[a-zA-Z]+$/)) {
+            fNameError.current.innerHTML = 'Enter valid first name';
+            return false;
+        }
+        fNameError.current.innerHTML = '<i class="fas fa-check-circle"></i>';
+        return true;
+    }
+    
+    const validateLName = () => {
+        var name = document.getElementById('contact-lname').value;
+    
+        if(name.length === 0) {
+            lNameError.current.innerHTML = 'Last name is required';
+            return false;
+        }
+        if(!name.match(/^[a-zA-Z]+[- ']{0,1}[a-zA-Z]+$/)) {
+            lNameError.current.innerHTML = 'Enter valid last name';
+            return false;
+        }
+        lNameError.current.innerHTML = '<i class="fas fa-check-circle"></i>';
+        return true;
+    }
+    
+    const validateEmail = () => {
+        var email = document.getElementById('contact-email').value;
+    
+        if(email.length === 0) {
+            emailError.current.innerHTML = 'Email is required';
+            return false;
+        }
+        if(!email.match( /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
+            emailError.current.innerHTML = 'Enter valid email';
+            return false;
+        }
+        emailError.current.innerHTML = '<i class="fas fa-check-circle"></i>';
+        return true;
+    }
+    
+    const validateMsg = () => {
+        var msg = document.getElementById('contact-msg').value;
+        var required = 30;
+        var left = required - msg.length;
+        if(left > 0) {
+            msgError.current.innerHTML = left + ' More characters required';
+            return false;
+        }
+        msgError.current.innerHTML = '<i class="fas fa-check-circle"></i>';
+        return true;
+    }
+    
+    const validateForm = () => {
+        if(!validateFName() || !validateLName() || !validateEmail() || !validateMsg()) {
+            submitError.current.style.display = 'block';
+            submitError.current.innerHTML = 'Correct fields before submitting';
+            setTimeout(function(){submitError.current.style.display = 'none';}, 6000);
+            return false;
+        }
+        window.location.href = '/contact-success';
+    }
+
     return (
       <div className="container bg-defaultteal dark:bg-defaultsky">
         <div className="form shadow-[0_0_20px_1px_rgba(9,19,27,1)] dark:shadow-[0_0_20px_1px_rgba(141,241,201,1)]">
@@ -78,7 +151,7 @@ const ContactForm = () => {
                   id="contact-fname"
                   onKeyUp={validateFName}
                 />
-                <span id="fname-error"></span>
+                <span id="fname-error" ref={fNameError}></span>
               </div>
               <div className="input-container">
                 <label htmlFor="">Last Name</label>
@@ -89,7 +162,7 @@ const ContactForm = () => {
                   id="contact-lname"
                   onKeyUp={validateLName}
                 />
-                <span id="lname-error"></span>
+                <span id="lname-error" ref={lNameError}></span>
               </div>
               <div className="input-container">
                 <label htmlFor="">Email</label>
@@ -100,7 +173,7 @@ const ContactForm = () => {
                   id="contact-email"
                   onKeyUp={validateEmail}
                 />
-                <span id="email-error"></span>
+                <span id="email-error" ref={emailError}></span>
               </div>
               <div className="input-container textarea">
                 <label htmlFor="">Message</label>
@@ -110,7 +183,7 @@ const ContactForm = () => {
                   id="contact-msg"
                   onKeyUp={validateMsg}
                 ></textarea>
-                <span id="msg-error"></span>
+                <span id="msg-error" ref={msgError}></span>
               </div>
               <button
                 onClick={validateForm}
@@ -119,84 +192,12 @@ const ContactForm = () => {
               >
                 Submit
               </button>
-              <span id="submit-error"></span>
+              <span id="submit-error" ref={submitError}></span>
             </form>
           </div>
         </div>
       </div>
     );
-}
-
-var fNameError = document.getElementById('fname-error');
-var lNameError= document.getElementById('lname-error');
-var emailError = document.getElementById('email-error');
-var msgError = document.getElementById('msg-error');
-var submitError = document.getElementById('submit-error');
-
-function validateFName() {
-    var name = document.getElementById('contact-fname').value;
-
-    if(name.length == 0) {
-        fNameError.innerHTML = 'First name is required';
-        return false;
-    }
-    if(!name.match(/^[a-zA-Z]+[- ']{0,1}[a-zA-Z]+$/)) {
-        fNameError.innerHTML = 'Enter valid first name';
-        return false;
-    }
-    fNameError.innerHTML = '<i class="fas fa-check-circle"></i>';
-    return true;
-}
-
-function validateLName() {
-    var name = document.getElementById('contact-lname').value;
-
-    if(name.length == 0) {
-        lNameError.innerHTML = 'Last name is required';
-        return false;
-    }
-    if(!name.match(/^[a-zA-Z]+[- ']{0,1}[a-zA-Z]+$/)) {
-        lNameError.innerHTML = 'Enter valid last name';
-        return false;
-    }
-    lNameError.innerHTML = '<i class="fas fa-check-circle"></i>';
-    return true;
-}
-
-function validateEmail() {
-    var email = document.getElementById('contact-email').value;
-
-    if(email.length == 0) {
-        emailError.innerHTML = 'Email is required';
-        return false;
-    }
-    if(!email.match( /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
-        emailError.innerHTML = 'Enter valid email';
-        return false;
-    }
-    emailError.innerHTML = '<i class="fas fa-check-circle"></i>';
-    return true;
-}
-
-function validateMsg() {
-    var msg = document.getElementById('contact-msg').value;
-    var required = 30;
-    var left = required - msg.length;
-    if(left > 0) {
-        msgError.innerHTML = left + ' More characters required';
-        return false;
-    }
-    msgError.innerHTML = '<i class="fas fa-check-circle"></i>';
-    return true;
-}
-
-function validateForm() {
-    if(!validateFName() || !validateLName() || !validateEmail() || !validateMsg()) {
-        submitError.style.display = 'block';
-        submitError.innerHTML = 'Correct fields before submitting';
-        setTimeout(function(){submitError.style.display = 'none';}, 6000);
-        return false;
-    }
 }
 
 export default ContactForm;
