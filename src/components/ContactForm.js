@@ -1,4 +1,5 @@
-import React, { useRef  } from 'react';
+import React, { useRef, useState } from 'react';
+import ContactSuccess from "../pages/ContactSuccess";
 import '../assets/styles/ContactForm.css';
 import { FaPhone, FaEnvelope, FaMapMarkedAlt } from 'react-icons/fa';
 import github from "../assets/images/github.svg";
@@ -11,6 +12,7 @@ const ContactForm = () => {
     const emailError = useRef(null);
     const msgError = useRef(null);
     const submitError = useRef(null);
+    const [success, setSuccess] = useState(false);
 
     const validateFName = () => {
         var name = document.getElementById('contact-fname').value;
@@ -69,15 +71,23 @@ const ContactForm = () => {
         return true;
     }
     
-    const validateForm = () => {
+    const validateForm = (event) => {
+        event.preventDefault();
         if(!validateFName() || !validateLName() || !validateEmail() || !validateMsg()) {
             submitError.current.style.display = 'block';
             submitError.current.innerHTML = 'Correct fields before submitting';
             setTimeout(function(){submitError.current.style.display = 'none';}, 6000);
-            return false;
-        }
-        window.location.href = '/contact-success';
-    }
+            setSuccess(false);
+        } else {
+            setSuccess(true);
+            submitError.current.style.display = 'block';
+            submitError.current.innerHTML = 'Message sent successfully!';
+            setTimeout(function() {
+              submitError.current.style.display = 'none';
+              setSuccess(false);
+            }, 6000);
+          }
+        };
 
     return (
       <div className="container bg-defaultteal dark:bg-defaultsky">
