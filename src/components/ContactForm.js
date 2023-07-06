@@ -82,7 +82,7 @@ const ContactForm = () => {
         //     setTimeout(function() {submitError.current.style.display = 'none';}, 6000);
         //     return true;
         //   }
-        };
+    }};
 
     return (
       <div className="container bg-defaultteal dark:bg-defaultsky">
