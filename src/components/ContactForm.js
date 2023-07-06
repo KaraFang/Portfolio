@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import '../assets/styles/ContactForm.css';
-import { FaEnvelope, FaMapMarkedAlt } from 'react-icons/fa';
+import { FaCheckCircle, FaEnvelope, FaMapMarkedAlt } from 'react-icons/fa';
+import ReactDOMServer from 'react-dom/server';
 import github from "../assets/images/github.svg";
 import linkedin from "../assets/images/linkedin.svg";
 import instagram from "../assets/images/instagram.svg";
@@ -10,7 +11,7 @@ const ContactForm = () => {
     const lNameError = useRef(null);
     const emailError = useRef(null);
     const msgError = useRef(null);
-    const submitError = useRef(null);
+    const submitMsg = useRef(null);
 
     const validateFName = () => {
         var name = document.getElementById('contact-fname').value;
@@ -23,7 +24,7 @@ const ContactForm = () => {
             fNameError.current.innerHTML = 'Enter valid first name';
             return false;
         }
-        fNameError.current.innerHTML = '<i class="fas fa-check-circle"></i>';
+        fNameError.current.innerHTML = ReactDOMServer.renderToString(<FaCheckCircle className="check-icon" />);
         return true;
     }
     
@@ -38,7 +39,7 @@ const ContactForm = () => {
             lNameError.current.innerHTML = 'Enter valid last name';
             return false;
         }
-        lNameError.current.innerHTML = '<i class="fas fa-check-circle"></i>';
+        lNameError.current.innerHTML = ReactDOMServer.renderToString(<FaCheckCircle className="check-icon" />);
         return true;
     }
     
@@ -53,7 +54,7 @@ const ContactForm = () => {
             emailError.current.innerHTML = 'Enter valid email';
             return false;
         }
-        emailError.current.innerHTML = '<i class="fas fa-check-circle"></i>';
+        emailError.current.innerHTML = ReactDOMServer.renderToString(<FaCheckCircle className="check-icon" />);
         return true;
     }
     
@@ -65,22 +66,22 @@ const ContactForm = () => {
             msgError.current.innerHTML = left + ' More characters required';
             return false;
         }
-        msgError.current.innerHTML = '<i class="fas fa-check-circle"></i>';
+        msgError.current.innerHTML = ReactDOMServer.renderToString(<FaCheckCircle className="check-icon" />);
         return true;
     }
     
     const validateForm = (event) => {
         event.preventDefault();
         if(!validateFName() || !validateLName() || !validateEmail() || !validateMsg()) {
-            submitError.current.style.display = 'block';
-            submitError.current.innerHTML = 'Correct fields before submitting';
-            setTimeout(function(){submitError.current.style.display = 'none';}, 6000);
+            submitMsg.current.style.display = 'block';
+            submitMsg.current.innerHTML = 'Correct fields before submitting';
+            setTimeout(function(){submitMsg.current.style.display = 'none';}, 6000);
         } else {
-            submitError.current.style.display = 'block';
-            submitError.current.innerHTML = 'Message sent successfully!';
-            setTimeout(function() {submitError.current.style.display = 'none';}, 6000);
+            submitMsg.current.style.display = 'block';
+            submitMsg.current.innerHTML = 'Message sent successfully!';
+            setTimeout(function() {submitMsg.current.style.display = 'none';}, 6000);
             event.target.closest('form').submit(); // Trigger form submission
-          }
+        }
     };
 
     return (
@@ -143,7 +144,7 @@ const ContactForm = () => {
               <input
                 type="hidden"
                 name="_next"
-                // value="https://www.karafang.com/contact-success"
+                value="https://karafang.com"
               />
 
               <div className="input-container">
@@ -196,7 +197,7 @@ const ContactForm = () => {
               >
                 Submit
               </button>
-              <span id="submit-error" ref={submitError}></span>
+              <span id="submit-msg" className="submit-msg" ref={submitMsg}></span>
             </form>
           </div>
         </div>
