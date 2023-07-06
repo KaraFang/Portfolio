@@ -13,29 +13,39 @@ function App() {
 
   return (
     <div className="w-full overflow-hidden">
-      <div className={`bg-defaultteal dark:bg-defaultsky ${styles.paddingX} ${styles.flexCenter}`}>
+      <div
+        className={`bg-defaultteal dark:bg-defaultsky ${styles.paddingX} ${styles.flexCenter}`}
+      >
         <div className={`${styles.boxWidth}`}>
           <Navbar />
         </div>
       </div>
 
-      <div className={`bg-defaultteal dark:bg-defaultsky ${styles.flexCenter} ${styles.paddingYY}`}>
+      <div
+        className={`bg-defaultteal dark:bg-defaultsky ${styles.flexCenter} ${styles.paddingYY}`}
+      >
         <div className={`${styles.boxWidth}`}>
           <Home />
         </div>
       </div>
 
-      <div className={`bg-defaultteal dark:bg-defaultsky gallery-container ${styles.flexCenter} ${styles.paddingYY}`}
+      <div
+        className={`bg-defaultteal dark:bg-defaultsky gallery-container ${styles.flexCenter} ${styles.paddingYY}`}
         onMouseMove={handleMouseMove}
       >
-        <div id="blob" style={{ left: blobPosition.x, top: blobPosition.y }}></div>
+        <div
+          id="blob"
+          style={{ left: blobPosition.x, top: blobPosition.y }}
+        ></div>
         <div id="blur"></div>
         <div className={`${styles.boxWidth}`}>
           <Projects />
         </div>
       </div>
 
-      <div className={`bg-defaultteal dark:bg-defaultsky ${styles.flexCenter} ${styles.paddingYY}`}>
+      <div
+        className={`bg-defaultteal dark:bg-defaultsky ${styles.flexCenter} ${styles.paddingYY}`}
+      >
         <div className={`${styles.boxWidth}`}>
           <ContactMe />
         </div>

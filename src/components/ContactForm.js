@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import '../assets/styles/ContactForm.css';
-import { FaPhone, FaEnvelope, FaMapMarkedAlt } from 'react-icons/fa';
+import { FaEnvelope, FaMapMarkedAlt } from 'react-icons/fa';
 import github from "../assets/images/github.svg";
 import linkedin from "../assets/images/linkedin.svg";
 import instagram from "../assets/images/instagram.svg";
@@ -75,14 +75,13 @@ const ContactForm = () => {
             submitError.current.style.display = 'block';
             submitError.current.innerHTML = 'Correct fields before submitting';
             setTimeout(function(){submitError.current.style.display = 'none';}, 6000);
-            return false;
-        // } else {
-        //     submitError.current.style.display = 'block';
-        //     submitError.current.innerHTML = 'Message sent successfully!';
-        //     setTimeout(function() {submitError.current.style.display = 'none';}, 6000);
-        //     return true;
-        //   }
-    }};
+        } else {
+            submitError.current.style.display = 'block';
+            submitError.current.innerHTML = 'Message sent successfully!';
+            setTimeout(function() {submitError.current.style.display = 'none';}, 6000);
+            event.target.closest('form').submit(); // Trigger form submission
+          }
+    };
 
     return (
       <div className="container bg-defaultteal dark:bg-defaultsky">
@@ -144,7 +143,7 @@ const ContactForm = () => {
               <input
                 type="hidden"
                 name="_next"
-                value="https://www.karafang.com/contact-success"
+                // value="https://www.karafang.com/contact-success"
               />
 
               <div className="input-container">
