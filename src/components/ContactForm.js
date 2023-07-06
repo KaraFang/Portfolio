@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react';
-import ContactSuccess from "../pages/ContactSuccess";
 import '../assets/styles/ContactForm.css';
 import { FaPhone, FaEnvelope, FaMapMarkedAlt } from 'react-icons/fa';
 import github from "../assets/images/github.svg";
@@ -12,7 +11,7 @@ const ContactForm = () => {
     const emailError = useRef(null);
     const msgError = useRef(null);
     const submitError = useRef(null);
-    const [success, setSuccess] = useState(false);
+    const setSuccess = useState(false);
 
     const validateFName = () => {
         var name = document.getElementById('contact-fname').value;
@@ -86,6 +85,7 @@ const ContactForm = () => {
               submitError.current.style.display = 'none';
               setSuccess(false);
             }, 6000);
+            event.target.submit();
           }
         };
 
