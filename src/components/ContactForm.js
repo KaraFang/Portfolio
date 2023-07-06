@@ -76,12 +76,12 @@ const ContactForm = () => {
             submitError.current.innerHTML = 'Correct fields before submitting';
             setTimeout(function(){submitError.current.style.display = 'none';}, 6000);
             return false;
-        } else {
-            submitError.current.style.display = 'block';
-            submitError.current.innerHTML = 'Message sent successfully!';
-            setTimeout(function() {submitError.current.style.display = 'none';}, 6000);
-            return true;
-          }
+        // } else {
+        //     submitError.current.style.display = 'block';
+        //     submitError.current.innerHTML = 'Message sent successfully!';
+        //     setTimeout(function() {submitError.current.style.display = 'none';}, 6000);
+        //     return true;
+        //   }
         };
 
     return (
