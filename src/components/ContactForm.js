@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import '../assets/styles/ContactForm.css';
 import { FaPhone, FaEnvelope, FaMapMarkedAlt } from 'react-icons/fa';
 import github from "../assets/images/github.svg";
@@ -11,7 +11,6 @@ const ContactForm = () => {
     const emailError = useRef(null);
     const msgError = useRef(null);
     const submitError = useRef(null);
-    const setSuccess = useState(false);
 
     const validateFName = () => {
         var name = document.getElementById('contact-fname').value;
@@ -76,16 +75,12 @@ const ContactForm = () => {
             submitError.current.style.display = 'block';
             submitError.current.innerHTML = 'Correct fields before submitting';
             setTimeout(function(){submitError.current.style.display = 'none';}, 6000);
-            setSuccess(false);
+            return false;
         } else {
-            setSuccess(true);
             submitError.current.style.display = 'block';
             submitError.current.innerHTML = 'Message sent successfully!';
-            setTimeout(function() {
-              submitError.current.style.display = 'none';
-              setSuccess(false);
-            }, 6000);
-            event.target.submit();
+            setTimeout(function() {submitError.current.style.display = 'none';}, 6000);
+            return true;
           }
         };
 
